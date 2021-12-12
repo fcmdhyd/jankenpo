@@ -34,8 +34,8 @@ print("Rock Paper Scissor Showdown!\n")
 
 me = int(input("What do you choose?\n\nType 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 
-if me >= 3 or me <0:
-  print("Oops! Wrong number!\n")
+if me > 2 or me < 0:
+    print("Oops! Did you type wrong?\n")
 else:
   print(autogen[me])
 
@@ -44,10 +44,8 @@ else:
   cpugen = random.randint(0,2)
   print(autogen[cpugen])
   cpu = cpugen
-
-  if me > 2 or me < 0:
-    print("Oops! Did you type wrong?\n")
-  elif me == 0 and cpu == 2:
+  
+  if me == 0 and cpu == 2:
     print("You Win!\n")
   elif cpu == 1 and me == 0:
     print("You lost!\n")
